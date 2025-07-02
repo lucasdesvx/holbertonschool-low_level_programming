@@ -1,18 +1,8 @@
 #include "main.h"
-#include <stdio.h>
 
-/**
- * main - check the code.
- *
- * Return: Always 0.
- */
-int main(void)
+int _isupper(int c)
 {
-    char c;
-
-    c = 'A';
-    printf("%c: %d\n", c, _isupper(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isupper(c));
+    if (c >= 'A' && c <= 'Z')
+        return (1);
     return (0);
 }
