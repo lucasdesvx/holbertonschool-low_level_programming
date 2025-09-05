@@ -4,25 +4,29 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-    list_t *new_node; /* Création d'un pointeur pour le nouveau oeud */
+    list_t *new;        /* Pointeur vers le nouveau noeud */
+    unsigned int len = 0; /* Compteur pour calculer la longueur du string */
 
-    if (!head || !str) /* Vérifie que head et str ne sont pas NULL */
-        return (NULL); /* Retourne NULL si invalidité */
+    if (head == NULL || str == NULL) /* Vérifie ue head et str ne sont pas NULL */
+        return (NULL);               /* Retourne NULL si un des deux est invalide */
 
-    new_node = malloc(sizeof(list_t)); /* Alloue de la mémoire pour le nouveau oeud */
-    if (!new_node)                     /* Vérifie si malloc a échoué */
-        return (NULL);                 /* Retourne NULL si échec */
+    new = malloc(sizeof(list_t));    /* Alloue la mémoire pour le nouveau noeud */
+    if (new == NULL)                 /* Vérifie si malloc a échoué */
+        return (NULL);               /* Retourne NULL si l'allocation échoue */
 
-    new_node->str = strdup(str);       /* Duplique la string passée en argument */
-    if (!new_node->str)                /* Vérifie si strdup a échoué */
+    new->str = strdup(str);          /* Duplique la string et l'assigne str */
+    if (new->str == NULL)            /* Vérifie si strdup a échoué */
     {
-        free(new_node);                /* Libère la mémoire allouée si échec */
-        return (NULL);                 /* Retourne NULL */
+        free(new);                   /* Libèr dee la mmoire allouée au noeud */
+        return (NULL);               /* Retourne NULL si la duplication échoue */
     }
 
-    new_node->len = strlen(str);       /* Calcule la longueur de la string */
-    new_node->next = *head;            /* Pointe le nouveau noeud dans lancien premier noeud */
-    *head = new_node;                  /* Met le pointeur head sur le nouveau noeud */
+    while (str[len])                 /* Boucle pour calculer la longueur du string */
+        len++;                       /* Incrémente len pur chaque caractère */
 
-    return (new_node);                 /* Retourne ladresse du nouveau noeud */
+    new->len = len;                  /* Stocke la longueur de la string dans len */
+    new->next = *head;               /* Fait pointer le nouveau noeud vers l'ancien head */
+    *head = new;                     /* Mettre a jour head pour qu'il pointe vers le nouveau noeud */
+
+    return (new);                    /* Retourne l'adresse du nouveau noeud créé */
 }
