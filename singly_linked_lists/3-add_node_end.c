@@ -2,23 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-/**
- * add_node_end - ajoute un nœud à la fin d'une liste
- * @head: adresse du pointeur vers le premier nœud
- * @str: chaîne à dupliquer
- *
- * Return: adresse du nouveau nœud, ou NULL si échec
- */
 list_t *add_node_end(list_t **head, const char *str)
 {
     list_t *new_node, *temp;
     unsigned int len = 0;
 
-    /* calculer la longueur de la chaîne */
+    /* calculer la longueur de la string */
     while (str[len])
         len++;
 
-    /* créer le nouveau nœud */
+    /* créer le nouveau oeud */
     new_node = malloc(sizeof(list_t));
     if (!new_node)
         return (NULL);
@@ -40,12 +33,12 @@ list_t *add_node_end(list_t **head, const char *str)
         return (new_node);
     }
 
-    /* sinon, parcourir jusqu'au dernier nœud */
+    /* sinon, parcourir jusqu'au dernier noeud */
     temp = *head;
     while (temp->next)
         temp = temp->next;
 
-    /* ajouter le nouveau nœud à la fin */
+    /* ajouter le nouveau noeud a la fin */
     temp->next = new_node;
 
     return (new_node);
