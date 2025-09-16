@@ -6,41 +6,51 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	unsigned int i = 0;
-	char *str;
-	char *separator = "";
+	char *str, *sep;
+	char c;
+	int num;
+	float f;
 
-	va_start(args, format); /* Initialisation de la liste d'arguments */
+	va_start(args, format);
+	sep = "";
 
-	while (format && format[i]) /* Parcours du format */
+	while (format && format[i])
 	{
-		if (format[i] == 'c') /* Caractère */
+		c = format[i];
+
+		if (c == 'c' || c == 'i' || c == 'f' || c == 's')
 		{
-			printf("%s%c", separator, va_arg(args, int));
+			printf("%s", sep);
+
+			if (c == 'c')
+				printf("%c", va_arg(args, int));
+
+			if (c == 'i')
+			{
+				num = va_arg(args, int);
+				printf("%d", num);
+			}
+
+			if (c == 'f')
+			{
+				f = (float)va_arg(args, double);
+				printf("%f", f);
+			}
+
+			if (c == 's')
+			{
+				str = va_arg(args, char *);
+				if (!str)
+					str = "(nil)";
+				printf("%s", str);
+			}
+
+			sep = ", ";
 		}
-		else if (format[i] == 'i') /* Entier */
-		{
-			printf("%s%d", separator, va_arg(args, int));
-		}
-		else if (format[i] == 'f') /* Flottant */
-		{
-			printf("%s%f", separator, va_arg(args, double));
-		}
-		else if (format[i] == 's') /* string */
-		{
-			str = va_arg(args, char *);
-			if (str == NULL)
-				str = "(nil)";
-			printf("%s%s", separator, str);
-		}
-		else
-		{
-			i++;
-			continue; /* Ignore les types inconnus */
-		}
-		separator = ", "; /* Met a jour le séparateur après le 1er élément */
+
 		i++;
 	}
 
-	printf("\n"); /* Nouvelle ligne a la fin */
-	va_end(args);  /* Libération de la liste d'arguments */
+	va_end(args);
+	printf("\n");
 }
