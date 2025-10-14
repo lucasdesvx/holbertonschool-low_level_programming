@@ -2,6 +2,7 @@
 /**
  * main - Entry point
  *
+ * Description: print a sentence
  * Return: Always 0 (Success)
  */
 int main(void)
