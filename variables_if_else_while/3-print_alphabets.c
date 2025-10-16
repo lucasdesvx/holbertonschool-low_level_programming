@@ -6,7 +6,7 @@
  * return 
  */
 
-int main(void)
+char main(void)
 {
 	int alpha;
 	
