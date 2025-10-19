@@ -8,11 +8,16 @@
 
 int main(void)
 {
-	int chiffre;
+	int lechiffre;
 
-	for (chiffre = '0'; chiffre <= '9'; chiffre++)
-		putchar(chiffre);
-	putchar('\n');
-
+	for (lechiffre = 0; lechiffre <= 9; lechiffre++)
+	{
+		putchar(48 + lechiffre);
+		if (lechiffre != 9)
+		{
+			putchar(44);
+			putchar(32);
+		}
+	}
 	return (0);
 }
