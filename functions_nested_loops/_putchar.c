@@ -1,6 +1,12 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include <unistd.h>
 
-int main(void);
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-#endif
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
