@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- *print_last_digit - affiche le dernier chiffre dun nombt
- *@nombre
- *Return: la valeur du nombre
+ * print_last_digit - ca affiche le dernier chiffre dun nombre
+ * @n: le nombre dont on veut afficher le dernier chiffre
+ *
+ * Return: la valeur du dernier nombre
  */
 
 int print_last_digit(int nombre)
