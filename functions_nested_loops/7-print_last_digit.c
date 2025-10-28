@@ -8,9 +8,13 @@
 
 int print_last_digit(int nombre)
 {
-	if (nombre < 0)
-		nombre = -nombre;
+	int last_digit;
 
-	_putchar((nombre % 10)+ '0');
-	return (nombre % 10);
+	last_digit = nombre % 10;
+
+	if (last_digit < 0)
+		last_digit = -last_digit;
+	_putchar(last_digit + '0');
+
+	return (last_digit);
 }
