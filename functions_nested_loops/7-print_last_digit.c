@@ -2,7 +2,7 @@
 
 /**
  *print_last_digit - affiche le dernier chiffre dun nombt
- *
+ *@nombre
  *Return: la valeur du nombre
  */
 
