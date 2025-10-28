@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *main - Entry point
+ *print_last_digit - affiche le dernier chiffre dun nombt
  *
- *Return: Always 0 (Success)
+ *Return: la valeur du nombre
  */
 
 int print_last_digit(int nombre)
