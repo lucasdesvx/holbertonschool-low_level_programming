@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * reset_to_98 - updates the value of an integer to 98
- * @n: pointer to the integer to update
+ * swap_int - swaps the values of two integers
+ * @a: pointer to the first integer
+ * @b: pointer to the second integer
  *
  * Return: void
  */
