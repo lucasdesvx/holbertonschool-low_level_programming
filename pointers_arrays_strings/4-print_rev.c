@@ -4,7 +4,7 @@
  * print_rev -
  * @s:
  *
- * return: 
+ * return:
  */
 
 void print_rev(char *s)
