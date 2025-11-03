@@ -5,7 +5,7 @@
  * _islower - verifie juste si une lettre est minuscule
  * @c:
  *
- * return: 1 si cest une lettre minuscule
+ * Return:
  */
 
 int _islower(int c)
