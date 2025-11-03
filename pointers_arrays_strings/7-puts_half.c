@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
+ * puts_half - print half of a string
+ * @str:
  *
  *
- *
- *
+ * return:
  */
 
 void puts_half(char *str)
