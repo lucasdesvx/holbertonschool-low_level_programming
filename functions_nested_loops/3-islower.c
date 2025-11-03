@@ -3,8 +3,9 @@
 
 /**
  * _islower - checks for lowercase character
+ * @c:
  *
- * Return:
+ * Return: to _islower
  */
 
 int _islower(int c)
