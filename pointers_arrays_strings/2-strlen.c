@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
+ *_strlen -
+ *@s:
  *
- *
- *
+ *return: void
  */
 
 int _strlen(char *s)
