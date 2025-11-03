@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
+ * _puts -
+ * @str
  *
- *
- *
+ * return:
  */
 
 void _puts(char *str)
