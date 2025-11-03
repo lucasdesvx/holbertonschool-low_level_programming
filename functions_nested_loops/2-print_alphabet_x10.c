@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- *print_alphabet_x10: print 10 time the alphabet
+ *print_alphabet_x10 - print 10 time the alphabet
  *
- *return void
+ *return: void
  */
 
 void print_alphabet_x10(void)
