@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_rev -
- * @s:
+ * print_rev - print a sentence in reverse
+ * @s: pointer
  *
  * return:
  */
