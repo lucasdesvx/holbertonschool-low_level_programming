@@ -2,9 +2,9 @@
 
 /**
  *_strlen - the string lengh
- *@s: pointer
+ *@s: pointer for the lengh
  *
- *return: void
+ *return: to _strlen
  */
 
 int _strlen(char *s)
