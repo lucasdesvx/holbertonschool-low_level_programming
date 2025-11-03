@@ -3,7 +3,7 @@
 
 /**
  * print_array - print n element of an array of integers
- * @a:
+ * @a: pointer
  * @n:
  *
  * return:
