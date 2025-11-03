@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- *islower - verifie juste si une lettre est minuscule
+ * islower - verifie juste si une lettre est minuscule
+ * @c:
  *
- *return: 1 si cest une lettre minuscule
+ * return: 1 si cest une lettre minuscule
  */
 
 int _islower(int c)
