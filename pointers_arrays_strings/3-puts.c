@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _puts -
- * @str
+ * _puts - put a sentence
+ * @str:
  *
  * return:
  */
