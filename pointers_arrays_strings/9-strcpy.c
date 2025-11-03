@@ -2,10 +2,10 @@
 
 /**
  * _strcpy - function that copies the string pointed to the buffer pointed
- * @dest:
- * @src:
+ * @dest: destination
+ * @src: source
  *
- * Return:
+ * Return: to _strcpy
  */
 
 char *_strcpy(char *dest, char *src)
