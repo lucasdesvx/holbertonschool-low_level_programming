@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- *print_sign - print every symbole
+ * print_sign - print every symbole
+ * @n:
  *
- *return to sucess
+ * return: to print_sign
  */
 
 int print_sign(int n)
