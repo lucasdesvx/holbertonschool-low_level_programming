@@ -5,7 +5,7 @@
  * _isalpha - that checks for alphabetic character
  * @c:
  *
- * return: to _isalpha
+ * Return: to _isalpha
  */
 
 int _isalpha(int c)

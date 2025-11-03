@@ -3,7 +3,7 @@
 /**
  * jack_bauer - function that prints every minute of the day of Jack Bauer
  *
- * return: to void
+ * Return: to void
  */
 
 void jack_bauer(void)

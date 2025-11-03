@@ -4,7 +4,7 @@
  * print_sign - print every symbole
  * @n:
  *
- * return: to print_sign
+ * Return: to print_sign
  */
 
 int print_sign(int n)
