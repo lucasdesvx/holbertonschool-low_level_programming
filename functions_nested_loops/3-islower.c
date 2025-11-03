@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _islower - verifie juste si une lettre est minuscule
+ * _islower - checks for lowercase character
  * @c:
  *
  * Return:
