@@ -12,7 +12,7 @@ char *_strcat(char *dest, char *src)
 {
 	int lestring1 = 0;
 	int lestring2 = 0;
-	
+
 	while (dest[lestring1] != '\0')
 	{
 		lestring1++;
