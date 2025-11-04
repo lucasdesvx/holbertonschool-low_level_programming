@@ -12,10 +12,10 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int exemple1 = 0;
-	
+
 	int exemple2 = 0;
-	
-	
+
+
 	while (dest[exemple1] != '\0')
 	{
 		exemple1++;
