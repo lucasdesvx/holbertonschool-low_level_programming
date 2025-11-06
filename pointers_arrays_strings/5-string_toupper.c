@@ -8,7 +8,7 @@
  * return: to *string_toupper
  */
 
-char string_toupper(charstr)
+char *string_toupper(char *str)
 {
 	int look;
 	
