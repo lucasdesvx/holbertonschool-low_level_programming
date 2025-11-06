@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *string_toupper - function that changes all lowercase letters of a string to uppercase
+ * *string_toupper - function
  * @str:
  *
  *
@@ -11,8 +11,7 @@
 char *string_toupper(char *str)
 {
 	int look;
-
-
+	
 	for (look = 0; str[look] != '\0'; look++)
 	{
 		if (str[look] >= 'a' && str[look] <= 'z')
