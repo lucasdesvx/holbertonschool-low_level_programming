@@ -11,7 +11,7 @@
 char *string_toupper(char *str)
 {
 	int look;
-	
+
 	for (look = 0; str[look] != '\0'; look++)
 	{
 		if (str[look] >= 'a' && str[look] <= 'z')
