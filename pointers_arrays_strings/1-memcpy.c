@@ -3,7 +3,7 @@
 /**
  * _memcpy - that copies memory area
  * @src:
- * @n: 
+ * @n:
  *
  * Return: to _memcpy
  */
