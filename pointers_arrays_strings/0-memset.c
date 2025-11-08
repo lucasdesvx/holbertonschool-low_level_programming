@@ -2,8 +2,8 @@
 
 /**
  * *_memset -  function that fills memory with a constant byte
- * @n:
- * @b:
+ * @n: bla bla
+ * @b: bla bla
  *
  * Return: to *_memset
  */
