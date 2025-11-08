@@ -4,7 +4,7 @@
  * string_toupper - hanges all lowercase letters of a string to uppercase
  * @str: string
  *
- * return: to string_toupper
+ * return: to *string_toupper
  */
 
 char *string_toupper(char *str)
