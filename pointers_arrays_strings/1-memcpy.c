@@ -4,6 +4,7 @@
  * _memcpy - that copies memory area
  * @src: source
  * @n: bla bla
+ * @dest: bla bla
  *
  * Return: to _memcpy
  */
