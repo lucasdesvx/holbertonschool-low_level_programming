@@ -2,8 +2,8 @@
 
 /**
  * _memcpy - that copies memory area
- * @src:
- * @n:
+ * @src: source
+ * @n: bla bla
  *
  * Return: to _memcpy
  */
