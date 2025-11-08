@@ -4,6 +4,7 @@
  * *_memset -  function that fills memory with a constant byte
  * @n: bla bla
  * @b: bla bla
+ * @s: bla bla
  *
  * Return: to *_memset
  */
