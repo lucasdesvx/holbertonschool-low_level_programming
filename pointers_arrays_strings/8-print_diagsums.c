@@ -3,8 +3,8 @@
 
 /**
  * print_diagsums - that prints the sum
- * @a:
- * @size:
+ * @a: bla bla
+ * @size: bla bla
  *
  * Return: to diagsums
  */
