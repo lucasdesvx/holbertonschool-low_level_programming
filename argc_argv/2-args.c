@@ -11,6 +11,12 @@
 
 int main(int argc, char *argv[])
 {
-	int rec§ot;
+	int recevoir;
 
 
+	for (recevoir = 0; recevoir < argc; recevoir++)
+	{
+		printf("%s\n", argv[recevoir]);
+	}
+	return (0);
+}
