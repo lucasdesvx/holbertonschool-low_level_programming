@@ -3,7 +3,8 @@
 
 /**
  * main - check the code
- *
+ * @argc: bla bla
+ * @argv: bla bla
  *
  * Return: Always 0
  */
