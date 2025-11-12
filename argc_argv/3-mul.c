@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
+ * main - check the code
  * @argc: argumentation count
  * @argv: argumentation vecteur
  *
- * Return: Nothing.
+ * Return: always 0
  */
 
 int main(int argc, char *argv[])
