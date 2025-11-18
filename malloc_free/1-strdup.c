@@ -19,13 +19,13 @@ char *_strdup(char *str)
 		return (NULL);
 
 	while (str[longueur])
-        longueur++;
+		longueur++;
 
 
 
 	ledouble = malloc(longueur + 1);
 	if (ledouble == NULL)
-	
+
 		return (NULL);
 
 	for (memoire = 0; memoire < longueur; memoire++)
