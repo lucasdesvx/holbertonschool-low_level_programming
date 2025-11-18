@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup - function that returns a pointer 
+ * _strdup - function that returns a pointer
  * @memoire: a variable
  * @ledouble:a variable
  * @longueur: a variable
