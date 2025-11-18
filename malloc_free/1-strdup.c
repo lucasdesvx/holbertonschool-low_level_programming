@@ -3,9 +3,7 @@
 
 /**
  * _strdup - function that returns a pointer
- * @memoire: a variable
- * @ledouble:a variable
- * @longueur: a variable
+ * @str: bla bla
  *
  * Return: to _strdup
  */
