@@ -11,7 +11,7 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t nodes = 0;
+	size_t noeud = 0;
 
 	while (h != NULL)
 	{
@@ -20,8 +20,8 @@ size_t print_list(const list_t *h)
 		else
 			printf("[%u] %s\n", h->len, h->str);
 
-		nodes++;
+		noeud++;
 		h = h->next;
 	}
-	return (nodes);
+	return (noeud);
 }
