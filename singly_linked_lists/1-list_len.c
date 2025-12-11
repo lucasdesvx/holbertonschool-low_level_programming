@@ -10,7 +10,7 @@
 size_t list_len(const list_t *h)
 {
 	size_t compter = 0;
-	
+
 	while (h)
 	{
 		compter++;
