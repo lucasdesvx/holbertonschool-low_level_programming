@@ -23,11 +23,11 @@ int main(int argc, char *argv[])
 			if (argv[planA][planB] < '0' || argv[planA][planB] > '9')
 			{
 				printf("Error\n");
-				return 1;
+				return (1);
 			}
 		}
 		nombreC += atoi(argv[planA]);
 	}
 	printf("%d\n", nombreC);
-	return 0;
+	return (0);
 }
