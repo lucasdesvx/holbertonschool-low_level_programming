@@ -5,8 +5,8 @@
 
 /**
  * create_file - that creates a file who have a right access
- * @filename:
- * @text_content:
+ * @filename: a pointer
+ * @text_content: a pointer
  *
  * Return: to create_file
  */
