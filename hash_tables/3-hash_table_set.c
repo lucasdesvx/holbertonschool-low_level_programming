@@ -42,5 +42,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (noeud == NULL)
 		return (0);
+
+	noeud->key = strdup(key);
+	noeud->value = strdup(value);
+
+	if (noeud->key == NULL || noeud->value == NULL)
+	{
+		free(noeud->key);
+		free(noeud->value);
+		free(noeud);
+		return (0);
+	}
 	return (1);
 }
