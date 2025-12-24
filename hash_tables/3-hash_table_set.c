@@ -1,9 +1,9 @@
-#include "hash_tables.h"
 #include <string.h>
 #include <stdlib.h>
+#include "hash_tables.h"
 
 /**
- * hash_table_set - adds or updates an element in the hash table
+ * hash_table_set - adds or updates a key/value in a hash table
  * @ht: pointer
  * @key: pointer
  * @value: pointer
@@ -15,31 +15,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int leindex;
 	hash_node_t *noeud;
-	char *valeurA;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	leindex = key_index((const unsigned char *)key, ht->size);
+	leindex = key_index((unsigned char *)key, ht->size);
 	noeud = ht->array[leindex];
-	
-	
-	while (noeud != NULL)
+
+	while (noeud)
 	{
 		if (strcmp(noeud->key, key) == 0)
 		{
-			valeurA = strdup(value);
-			if (valeurA == NULL)
-				return (0);
 			free(noeud->value);
-
-			noeud->value = valeurA;
-			return (1);
+			noeud->value = strdup(value);
+			return (noeud->value != NULL);
 		}
 		noeud = noeud->next;
 	}
-	noeud = malloc(sizeof(hash_node_t));
 
+	noeud = malloc(sizeof(hash_node_t));
 	if (noeud == NULL)
 		return (0);
 
@@ -53,5 +47,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(noeud);
 		return (0);
 	}
+
+	noeud->next = ht->array[leindex];
+	ht->array[leindex] = noeud;
+
 	return (1);
 }
