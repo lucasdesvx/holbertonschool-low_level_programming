@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet -  that prints the 9 times table, starting with 0
+ * times_table - that prints the 9 times table, starting with 0
  *
  * Return: Always 0 (Success)
  */
