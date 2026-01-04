@@ -11,7 +11,7 @@ void times_table(void)
 	int planA;
 	int planB;
 	int planC;
-	
+
 	for (planA = 0; planA <= 9; planA++)
 	{
 		for (planB = 0; planB <= 9; planB++)
