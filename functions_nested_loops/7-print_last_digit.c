@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * print_last_digit - ca affiche le dernier chiffre dun nombre
- * @n: le nombre dont on veut afficher le dernier chiffre
+ * print_last_digit - prints the last digit of a number
+ * @n: number whose last digit is printed
  *
- * Return: la valeur du dernier nombre
+ * Return: the value of the last digit
  */
-
 int print_last_digit(int n)
 {
 	int last_digit;
