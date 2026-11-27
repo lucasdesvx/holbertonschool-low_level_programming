@@ -5,7 +5,7 @@
  *
  * Return: 1 if n is prime, otherwise 0
  */
-static int is_prime_recursive(int n, int start)
+int is_prime_recursive(int n, int start)
 {
 	if (start > n / start)
 		return (1);
