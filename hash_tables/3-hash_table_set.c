@@ -4,19 +4,21 @@
 
 /**
  * hash_table_set - adds or updates a key/value in a hash table
- * @ht: pointer
- * @key: pointer
- * @value: pointer
+ * @ht: hash table to update
+ * @key: key to add or update
+ * @value: value associated with the key
  *
- * Return: to hash_table_set
+ * Return: 1 on success, or 0 on failure
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int leindex;
 	hash_node_t *noeud;
+	char *new_value;
 
-	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
+	    key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
 	leindex = key_index((unsigned char *)key, ht->size);
@@ -26,9 +28,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(noeud->key, key) == 0)
 		{
+			new_value = strdup(value);
+			if (new_value == NULL)
+				return (0);
 			free(noeud->value);
-			noeud->value = strdup(value);
-			return (noeud->value != NULL);
+			noeud->value = new_value;
+			return (1);
 		}
 		noeud = noeud->next;
 	}
