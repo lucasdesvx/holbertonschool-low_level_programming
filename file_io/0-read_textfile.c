@@ -13,36 +13,42 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int compteur;
-	ssize_t planA;
-	ssize_t planB;
-	char *fichier;
+	int fd;
+	ssize_t bytes_read;
+	ssize_t bytes_written;
+	char *buffer;
 
 	if (filename == NULL)
 		return (0);
 
-
-	compteur = open(filename, O_RDONLY);
-	if (compteur == -1)
+	if (letters == 0)
 		return (0);
 
-	fichier = malloc(letters);
-	if (fichier == NULL)
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+
+	buffer = malloc(letters);
+	if (buffer == NULL)
 	{
-		close(compteur);
+		close(fd);
 		return (0);
 	}
 
-	planA = read(compteur, fichier, letters);
-	planB = write(STDOUT_FILENO, fichier, planA);
+	bytes_read = read(fd, buffer, letters);
+	if (bytes_read == -1)
+	{
+		free(buffer);
+		close(fd);
+		return (0);
+	}
 
+	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+	free(buffer);
+	close(fd);
 
-	free(fichier);
-	close(compteur);
-
-
-	if (planA == -1 || planB != planA)
+	if (bytes_written != bytes_read)
 		return (0);
 
-	return (planB);
+	return (bytes_read);
 }
